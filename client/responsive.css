@@ -1,0 +1,287 @@
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+	
+.container {
+	width: 1170px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+}
+
+
+@media screen and (max-width: 1199px) {
+	
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.banner-right {
+  width: 40%;
+}
+div.banner-left {
+  width: 60%;
+}
+div.banner-txt h1 {
+  font-size: 28px;
+  line-height: 38px;
+}
+ul.banner-list > li {
+  background-size: auto 20px;
+  font-size: 17px;
+  line-height: 38px;
+  padding-left: 35px;
+}
+div.banner-img {
+  margin-top: -115px;
+  text-align: right;
+}
+div.banner-img.right > img {
+  height: 195px;
+}
+form.register-form {
+  padding: 30px;
+}
+div.form-head h1 {
+  font-size: 30px;
+}
+div.form-head > p {
+  font-size: 15px;
+}
+div.register-form .form-head {
+  margin-bottom: 25px;
+}
+input.submit-btn {
+  font-size: 18px;
+  height: 55px;
+  line-height: 55px;
+}
+div.start_now-head h1 {
+  font-size: 26px;
+}
+div.start_now-left p {
+  font-size: 16px;
+}
+.secured-list img {
+  height: 30px;
+}
+div.start_now-head {
+  margin-bottom: 10px;
+}
+div.start_now-left {
+  width: 62%;
+}
+form.register-form::before {
+  bottom: -49px;
+  height: 48px;
+}
+
+
+
+}
+
+
+@media screen and (max-width: 991px) {
+	
+div.banner-left {
+  width: 50%;
+}
+div.banner-right {
+  width: 50%;
+}
+div.banner-txt {
+  padding-top: 30px;
+}
+div.banner-txt h1 {
+  font-size: 24px;
+  line-height: 38px;
+}
+ul.banner-list > li {
+  background-size: auto 17px;
+  font-size: 15px;
+  line-height: 33px;
+  padding-left: 28px;
+}
+div.banner-img {
+  margin-top: 0;
+  text-align: left;
+  width: 100%;
+}
+.secured-list {
+  width: 100%;
+  margin-top: 12px;
+}
+div.start_now-left {
+  width: 100%;
+}
+div.start_now-left p {
+  position: relative;
+}
+.featured-content > p br {
+	display: none;
+}
+
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+div.banner-txt h1 {
+  font-size: 19px;
+  line-height: 27px;
+}
+ul.banner-list > li {
+  background-size: auto 17px;
+  font-size: 14px;
+  line-height: 33px;
+  padding-left: 28px;
+}
+div.banner-left {
+  width: 45%;
+}
+div.banner-right {
+  width: 55%;
+}
+div.form-head > p {
+  font-size: 14px;
+}
+form.register-form .checkbox-group {
+  margin-bottom: 20px;
+}
+div.header-left, div.header-right {
+  width: auto;
+}
+div.header-right {
+	float: right;
+}
+.social_icons-list li img {
+  height: 37px;
+}
+ul.social_icons-list li {
+  margin: 0 2px;
+}
+section.start_now-section {
+  margin-top: 100px;
+  padding: 85px 0 65px;
+}
+div.featured-content > h3 {
+  font-size: 18px;
+}
+
+
+
+}
+
+
+@media screen and (max-width: 639px) {
+
+div.banner-left {
+  margin-bottom: 35px;
+  width: 100%;
+}
+div.banner-img {
+  margin-top: -147px;
+  text-align: right;
+  width: 100%;
+}
+div.banner-right {
+  width: 100%;
+}
+section.start_now-section {
+  margin-top: 125px;
+  padding: 85px 0 45px;
+}
+div.banner-img.right > img {
+  height: 145px;
+}
+div.header-left, div.header-right {
+  text-align: center;
+  width: 100%;
+}
+div.brand-logo > a img {
+  display: inline-block;
+}
+div.social_icons-main {
+  text-align: center;
+}
+header#site-header {
+  padding: 20px 0;
+}
+.brand-logo {
+  margin-bottom: 7px;
+}
+div.our_featured-box .featured-col {
+  width: 100%;
+}
+div.our_featured-head h1 {
+  font-size: 32px;
+}
+.our_featured-head p br {
+	display: none;
+}
+div.our_featured-head p {
+  font-size: 16px;
+}
+
+
+}
+
+
+@media screen and (max-width: 479px) {
+
+div.banner-img {
+  margin-top: 0;
+  text-align: left;
+  width: 100%;
+}
+div.banner-img.right > img {
+  height: 195px;
+}
+div.form-head h1 {
+  font-size: 26px;
+}
+form.register-form {
+  padding: 30px 20px;
+}
+
+
+
+}
+
+
+@media screen and (max-width: 359px) {
+
+.register-form .checkbox-group > span {
+  font-size: 14px;
+}
+.already_member {
+  font-size: 14px;
+}
+div.form-head > p {
+  font-size: 13px;
+}
+
+
+
+
+
+}

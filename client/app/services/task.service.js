@@ -14,15 +14,29 @@ require('rxjs/add/operator/map');
 var TaskService = (function () {
     function TaskService(http) {
         this.http = http;
+        this.registerUser = function (username, email, pass) {
+            var headers = new http_1.Headers();
+            var data = { "username": username, "pass": pass, "email": email };
+            headers.append('Content-Type', 'application/json');
+            return this.http.post('/api/user/register', JSON.stringify(data), { headers: headers })
+                .map(function (res) { return res.json(); });
+        };
         console.log('Task Service Initialized...');
     }
     TaskService.prototype.getTasks = function () {
-        return this.http.get('/api/tasks')
+        var headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        var uid = localStorage.getItem('userId');
+        //var newTask ={"user_id":uid};
+        return this.http.get('/api/tasks/' + uid)
             .map(function (res) { return res.json(); });
     };
     TaskService.prototype.addTask = function (newTask) {
+        console.log(newTask.isDone);
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
+        var uid = localStorage.getItem('userId');
+        newTask = { "user_id": uid, "title": newTask.title, "isDone": newTask.isDone };
         return this.http.post('/api/task', JSON.stringify(newTask), { headers: headers })
             .map(function (res) { return res.json(); });
     };
@@ -34,6 +48,13 @@ var TaskService = (function () {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.put('/api/task/' + task._id, JSON.stringify(task), { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    TaskService.prototype.loginUser = function (usr, pass) {
+        var headers = new http_1.Headers();
+        var data = { "usr": usr, "pass": pass };
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('/api/user', JSON.stringify(data), { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TaskService = __decorate([

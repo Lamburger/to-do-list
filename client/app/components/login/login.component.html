@@ -1,0 +1,13 @@
+<!-- <button (click)="login()" class="btn btn-default"> Login </button> -->
+
+<form class="well" (submit)="loginUser(username,password)">
+      <div class="form-group">
+        <input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="Add Username...">    
+      </div>  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="password" name="password" class="form-control" placeholder="Add password...">    
+      </div> 
+    <button type="submit">submit</button>
+</form>
+
+
