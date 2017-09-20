@@ -25,7 +25,7 @@
         <div class="row">
           <div class="banner-left col left">
             <div class="banner-txt">
-              <h1 class="text-transform">A simple to do list <br/> to keep you organized </h1>
+              <h1 class="text-transform">A simple to do list<br/> to keep you organized</h1>
               <ul class="banner-list">
                 <li>Create unlimited tasks</li>
                 <li>Keep track of complete tasks</li>
@@ -69,7 +69,7 @@
               <div class="form-group">
                 <button type="submit" class="submit-btn text-transform">Become A Member </button>
               </div>
-              <p class="already_member">Already a member  <a (click)="showLogin()" >Click here</a></p>
+              <p class="already_member">Already a member  <a href="javascript:void();" (click)="showLogin()" >Click here</a></p>
             </form> 
           
           </div>
@@ -92,23 +92,68 @@
     </section>
     <!-- start now section end -->
        <!-- our featured section start -->
-
+<!--     <section class="our_featured-section">
+      <div class="container">
+        <div class="row">
+          <div class="our_featured-head full-width left col">
+            <h1 class="text-transform">Our Featured</h1>
+            <span class="divider"><img alt="head-divider" border="0" src="img/head_divider.png"></span>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore <br/> mque laudantium, totam rem aperiam.</p>
+          </div>
+          <div class="our_featured-box full-width left">
+            <div class="featured-col left col">
+              <div class="featured-icon">
+                <img alt="gurantee-icon" border="0" src="img/gurantee-icon.png">
+              </div>
+              <div class="featured-content">
+                <h3>Lorem guarantee</h3>
+                <p>Nunc non tortor tincidunt, rutrum <br/> nibh in, gravida leo. Sed pulvinar <br/> lectus vitae sem consequat, lobortis <br/> sodales neque tincidunt.</p>
+              </div>
+            </div>
+            <div class="featured-col left col">
+              <div class="featured-icon">
+                <img alt="clock-icon" border="0" src="img/clock-icon.png">
+              </div>
+              <div class="featured-content">
+                <h3>Lorem Turnaround</h3>
+                <p>Nunc non tortor tincidunt, rutrum <br/> nibh in, gravida leo. Sed pulvinar <br/> lectus vitae sem consequat, lobortis <br/> sodales neque tincidunt.</p>
+              </div>
+            </div>
+            <div class="featured-col left col">
+              <div class="featured-icon">
+                <img alt="thumb-icon" border="0" src="img/thumb-icon.png">
+              </div>
+              <div class="featured-content">
+                <h3>Lorem Prices</h3>
+                <p>Nunc non tortor tincidunt, rutrum <br/> nibh in, gravida leo. Sed pulvinar <br/> lectus vitae sem consequat, lobortis <br/> sodales neque tincidunt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
    </div> 
-   <div *ngIf="showtask">
-   <div >
-     <button (click)="logout()" class="btn btn-default"> LogOut </button>
+   <div class="task-section" *ngIf="showtask">
+    <div class="container">
+      <div class="logout_action-btn text-right">
+       <button (click)="logout()" class="logout-btn"> LogOut </button>
+      </div>
+      <tasks></tasks> 
     </div>
-    <tasks></tasks> 
    </div>
-    <div *ngIf="showlog" >
-      <form class="well" (submit)="loginUser(username,password)">
-            <div class="form-group">
-              <input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="Add Username...">    
-            </div>  
-            <div class="form-group">
-              <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Add password...">    
-            </div> 
-          <button type="submit">submit</button>
+    <div class="login-section" *ngIf="showlog" >
+      <form class="well login-form" (submit)="loginUser(username,password)">
+        <div class="form-head">
+            <h1 class="text-transform">Login Here !</h1>
+            <p>Please Log in to your Account</p>
+          </div>
+        <div class="form-group">
+          <input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="Add Username..." required="ture">    
+        </div>  
+        <div class="form-group">
+          <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Add password..." required="ture">    
+        </div> 
+        <button class="submit-btn text-transform" type="submit">submit</button>
       </form>
      
 

@@ -1,21 +1,25 @@
 <!-- <div >
      <button (click)="logout()" class="btn btn-default"> LogOut </button>
 </div> -->
-<form class="well" (submit)="addTask($event)">
+<form class="well add_task-form" (submit)="addTask($event)">
       <div class="form-group">
         <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add Task...">    
       </div>  
 </form>
 
 <div class="task-list">
-    <div *ngFor="let task of tasks">
-        <div class="col-md-1">
-            <input type="checkbox" [checked]="task.isDone" (click)="updateStatus(task)">
+    <div class="task-row" *ngFor="let task of tasks">
+        <div class="task-input task-col">
+            <div class="form-group">
+                <div class="checkbox">
+                  <input type="checkbox" [checked]="task.isDone" (click)="updateStatus(task)"><label></label>
+                </div>
+            </div>
         </div>
-        <div class="col-md-7">
+        <div class="task-desc task-col">
             {{task.title}}    
         </div> 
-        <div class="col-md-4">
+        <div class="task_sction-btn task-col">
             <input type="button" (click)="deleteTask(task._id)" value="Delete" class="btn btn-danger">    
         </div>
         <br><br>

@@ -73,9 +73,8 @@ var RegisterComponent = (function () {
         this.showtask = false;
     };
     RegisterComponent.prototype.loginUser = function (username, password) {
-        console.log("sdfsdfsdfsd");
         this.taskService.loginUser(username, password).subscribe(function (data) {
-            // console.log(data);
+            console.log(data);
             if (data._id != "" || data._id != null) {
                 localStorage.setItem('userId', data._id);
                 console.log(localStorage.getItem('userId'));
